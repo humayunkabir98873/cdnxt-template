@@ -31,3 +31,19 @@ A reseller hosting control panel template with React frontend, Node.js backend, 
    ```bash
    git clone https://github.com/humayunkabir98873/cdnxt-template.git
    cd cdnxt-template
+   cp .env.example .env
+Edit .env as needed (especially JWT_SECRET and DB_URL).
+docker-compose up --build
+
+Update your /etc/hosts (or local DNS) to map the demo domains to localhost:
+127.0.0.1 cdnxt.localhost
+127.0.0.1 api.localhost
+127.0.0.1 traefik.localhost
+
+Access in browser:
+
+Frontend UI: https://cdnxt.localhost
+
+API backend: https://api.localhost
+
+Traefik dashboard: https://traefik.localhost
